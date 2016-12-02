@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>-->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	
+	<title>RPG Game HUD</title>
+	
+	
+	<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="index.css">	
+</head>
+
+<body>
+
+<div class="container-fluid miniMap">
+	<img src="images/sampleMiniMap.png">
+	<button onclick="DisplayMap()" type="button" class="btn btn-primary mainScreenButton">Map</button>
+</div>
+
+<!-- Set iframe size to the desired window to open -->
+<iframe id="secondaryWindow" src="" scrolling="no"></iframe>
+
+
+<div class="container-fluid taskBar">
+	<div class="btn-group mainScreenButton" role="group">
+		<button type="button" class="btn btn-primary">1</button>
+		<button type="button" class="btn btn-primary">2</button>
+		<button type="button" class="btn btn-primary">3</button>
+		<button type="button" class="btn btn-primary">4</button>
+		<button type="button" class="btn btn-primary">5</button>
+		<button type="button" class="btn btn-primary">6</button>
+		<button type="button" class="btn btn-primary">7</button>
+		<button type="button" class="btn btn-primary">8</button>
+		<button type="button" class="btn btn-primary">9</button>
+		<button type="button" class="btn btn-primary">0</button>
+		<button onclick="DisplayMainSettings()" type="button" class="btn btn-primary">S</button>
+	</div>
+</div>
+
+<div class="container-fluid inventoryBag">
+	<button onclick="DisplayInventory()" type="button" class="btn btn-primary mainScreenButton">I</button>
+</div>
+
+<!-- Include jquery.min.js plugin -->
+	<script src="assets/js/jquery-2.1.0.min.js"></script>
+	<!-- Include Bootstrap -->
+	<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+	<script src="index.js"></script>
+</body>
+
+</html>
+

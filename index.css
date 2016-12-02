@@ -1,0 +1,28 @@
+.taskBar{
+  position:absolute;
+  bottom:0px;
+  right:25%;
+  left:50%;
+  margin-left:-200px;
+}
+
+.inventoryBag{
+  position:absolute;
+  bottom:0px;
+  right:25%;
+  left:50%;
+  margin-left: 600px;
+}
+
+#secondaryWindow{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 300px;
+    margin-top: -150px; /*set to a negative number 1/2 of your height*/
+    margin-left: -250px; /*set to a negative number 1/2 of your width*/
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    visibility: visible;
+}

@@ -1,0 +1,28 @@
+.settingsBox{
+	width: 500px;
+	height: 500px;
+}
+
+#masterVolumeRange{
+	width: 400px;
+	margin-left: 40px;
+}
+
+#musicRange{
+	width: 350px;
+	margin-left: 60px;
+}
+
+#characterVoiceRange{
+	width: 350px;
+	margin-left: 60px;
+}
+
+#soundEffectsRange{
+	width: 350px;
+	margin-left: 60px;
+}
+
+.inlineText{
+	display:inline-block;
+}

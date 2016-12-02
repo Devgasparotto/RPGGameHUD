@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>-->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	
+	<title>RPG Game HUD</title>
+	
+	
+	<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="AudioSettings.css">	
+</head>
+
+<body>
+
+<div class="btn-group-vertical settingsBox" role="group">
+	<h1>Audio Settings</h1>
+	<p>Master Volume</p>
+	<input type="range" id="masterVolumeRange" value="5" min="0" max="10" step="1">
+	<p>Music</p>
+	<input type="range" id="musicRange" value="5" min="0" max="10" step="1"">
+	<p>Character Voice</p>
+	<input type="range" id="characterVoiceRange" value="5" min="0" max="10" step="1">
+	<p>Sound Effects</p>
+	
+	<input class="inlineText" type="range" id="soundEffectsRange" value="5" min="0" max="10" step="1">
+	<output>10</output>
+</div>
+
+<!-- Include jquery.min.js plugin -->
+	<script src="assets/js/jquery-2.1.0.min.js"></script>
+	<!-- Include Bootstrap -->
+	<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+	<script src="AudioSettings.js"></script>
+</body>
+
+</html>
+

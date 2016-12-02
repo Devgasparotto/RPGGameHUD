@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>-->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	
+	<title>RPG Game HUD</title>
+	
+	
+	<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="VideoSettings.css">	
+</head>
+
+<body>
+
+<div class="btn-group-vertical settingsBox" role="group">
+	<h1>Visual Settings</h1>
+	<p>Display Mode</p>
+	<select>
+		<option value="windowed">Windowed</option>
+		<option value="fullScreen">Full Screen</option>
+	</select>
+	<p>Resolution</p>
+	<select>
+		<option value="res1">1440 x 440</option>
+		<option value="res2">1024 x 768</option>
+		<option value="res3">1920 x 1080</option>
+	</select>
+	<p>Graphics Quality</p>
+	<table id="graphicsQualityTable">
+	    <tbody>
+	        <tr>
+	            <td rowspan="2" colspan="2">
+	            	<input type="range" id="graphicsRange" value="10" max="15">
+	            </td>
+	            <td>High</td>
+	        </tr>
+	        <br>
+	        <tr>
+	            <td colspan="1">Medium</td>
+	        </tr>
+	        <tr>
+	        	<td><br></td>
+	        </tr>
+	        <tr>
+	        	<td colspan="2"></td>
+	            <td>Low</td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
+
+<!-- Include jquery.min.js plugin -->
+	<script src="assets/js/jquery-2.1.0.min.js"></script>
+	<!-- Include Bootstrap -->
+	<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+	<script src="VideoSettings.js"></script>
+</body>
+
+</html>
+
