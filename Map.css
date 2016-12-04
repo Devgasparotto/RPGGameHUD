@@ -1,0 +1,49 @@
+body{
+	background-image: url("images/MapBackground.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+
+.anchorLocation{
+	position: absolute;
+	left: 320px;
+	top: 70px;
+}
+
+.towerLocation{
+	position: absolute;
+	left: 900px;
+	top: 120px;
+}
+
+.towerHouseLocation{
+	position: absolute;
+	left: 320px;
+	top: 590px;
+}
+
+#fastTravelBox{
+	position: absolute;
+	background-color: #8F8F8F;
+	width: 120px;
+	visibility: hidden;
+}
+
+.fastTravelText{
+	text-align: center;
+	color: white;
+}
+
+.fastTravelButton{
+	margin-top: 10px;
+	margin-right: 20px;
+	color: white;
+	outline: none;
+	background-color: transparent;
+	border: none;
+}
+
+.fastTravelButton:hover{
+	color: #555555;
+}

@@ -10,17 +10,38 @@
 	
 	
 	<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="index.css">	
+	<link rel="stylesheet" href="Map.css">	
 </head>
 
 <body>
+	<!-- <img id="anchor" class="anchorLocation" src="images/Anchor.png" usemap="#mapname"> -->
 
+	<map name="anchorMap">
+		<img class="anchorLocation" src="images/Anchor.png" usemap="#anchorMap">
+	    <area id="anchorArea" shape="rect" coords="9,12,300,100">
+	</map>
+
+	<map name="towerMap">
+		<img class="towerLocation" src="images/Tower.png" usemap="#towerMap">
+	    <area id="towerArea" shape="rect" coords="9,12,300,100">
+	</map>
+
+	<map name="towerHouseMap">
+		<img class="towerHouseLocation" src="images/TowerHouse.png" usemap="#towerHouseMap">
+	    <area id="towerHouseArea" shape="rect" coords="9,12,300,100">
+	</map>
+
+	<div id="fastTravelBox">
+		<p class="fastTravelText">Confirm Travel</p>
+		<button class="fastTravelButton" onclick="CloseFastTravelDialogue()" type="button">Yes</button>
+		<button class="fastTravelButton" onclick="CloseFastTravelDialogue()" type="button">No</button>
+	</div>
 
 <!-- Include jquery.min.js plugin -->
 	<script src="assets/js/jquery-2.1.0.min.js"></script>
 	<!-- Include Bootstrap -->
 	<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-	<script src="index.js"></script>
+	<script src="Map.js"></script>
 </body>
 
 </html>

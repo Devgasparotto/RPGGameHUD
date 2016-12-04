@@ -3,8 +3,8 @@ var inventoryWidth =1400;
 var inventoryHeight = 800;
 var mainSettingsWidth = 500;
 var mainSettingsHeight = 500;
-var mapWidth = 0;
-var mapHeight = 0;
+var mapWidth = 1600;
+var mapHeight = 750;
 
 //Specify current state of screen
 var screenStates = {
@@ -28,10 +28,6 @@ $(document).keyup(function(e) {
 
 window.onload = function() {
     OnLoad();
-    //TODO: verify dimension specifications are correct: Initialize Map Screen Dimensions to entire screen
-    //TODO: adjust map on screen reformat
-    mapWidth = screen.width;
-    mapHeight = screen.height;
 };
 
 function OnLoad(){
@@ -96,14 +92,10 @@ function DisplayMap(){
 }
 
 function DisplayInventory(){
-    if(currentState != screenStates.Inventory){
+    if(currentState != screenStates.Settings){
         currentState = screenStates.Inventory;
         inventoryURL = "Inventory.html";
         SetSecondaryWindowProperties(inventoryWidth, inventoryHeight, inventoryURL, true);
-    }
-    else{
-        currentState = screenStates.Main;
-        SetSecondaryWindowProperties(0, 0, "", false);
     }
 }
 
@@ -112,3 +104,13 @@ function CloseCurrentScreen(){
     SetMainScreenButtonVisibility(true);
     SetSecondaryWindowProperties(0, 0, "", false);
 }
+
+//Receive message from window inside Iframe and hide Iframe
+window.addEventListener('message', function(event) {
+    if(event.data.message == "CloseIframe")        {
+        CloseCurrentScreen();
+    }
+    else if(event.data.message = "QuitGame"){
+        alert("Quitting Game");
+    }
+}, false);

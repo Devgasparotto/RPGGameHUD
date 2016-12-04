@@ -15,18 +15,51 @@
 
 <body>
 
+<button onclick="CloseSelf()" id="closeButton" type="button" class="btn">X</button>
+
+<center><h1 class="titleText">Audio Settings</h1></center>
+<br><br>
+
 <div class="btn-group-vertical settingsBox" role="group">
-	<h1>Audio Settings</h1>
-	<p>Master Volume</p>
-	<input type="range" id="masterVolumeRange" value="5" min="0" max="10" step="1">
-	<p>Music</p>
-	<input type="range" id="musicRange" value="5" min="0" max="10" step="1"">
-	<p>Character Voice</p>
-	<input type="range" id="characterVoiceRange" value="5" min="0" max="10" step="1">
-	<p>Sound Effects</p>
-	
-	<input class="inlineText" type="range" id="soundEffectsRange" value="5" min="0" max="10" step="1">
-	<output>10</output>
+	<p class="masterVolumeText">Master Volume</p>
+	<div class="masterVolumeContainer">
+		<div class="flex-itemMaster">0</div>
+		<div class="fixedMaster">
+			<input type="range" id="masterVolumeRange" value="5" min="0" max="10" step="1">
+		</div>
+		<div class="flex-itemMaster number10">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp10</div>
+	</div>
+	<br>
+
+	<p class="minorVolumeText">Music</p>
+	<div class="container">
+		<div class="flex-item1">0</div>
+		<div class="fixed">
+			<input type="range" id="minorVolumeRange" value="5" min="0" max="10" step="1">
+		</div>
+		<div class="flex-item1 number10">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp10</div>
+	</div>
+	<br>
+
+	<p class="minorVolumeText">Character Voice</p>
+	<div class="container">
+		<div class="flex-item1">0</div>
+		<div class="fixed">
+			<input type="range" id="minorVolumeRange" value="5" min="0" max="10" step="1">
+		</div>
+		<div class="flex-item1 number10">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp10</div>
+	</div>
+	<br>
+
+	<p class="minorVolumeText">Sound Effects</p>
+	<div class="container">
+		<div class="flex-item1">0</div>
+		<div class="fixed">
+			<input type="range" id="minorVolumeRange" value="5" min="0" max="10" step="1">
+		</div>
+		<div class="flex-item1 number10">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp10</div>
+	</div>
+
 </div>
 
 <!-- Include jquery.min.js plugin -->

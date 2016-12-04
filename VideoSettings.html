@@ -15,38 +15,67 @@
 
 <body>
 
-<div class="btn-group-vertical settingsBox" role="group">
-	<h1>Visual Settings</h1>
-	<p>Display Mode</p>
-	<select>
-		<option value="windowed">Windowed</option>
-		<option value="fullScreen">Full Screen</option>
-	</select>
-	<p>Resolution</p>
-	<select>
-		<option value="res1">1440 x 440</option>
-		<option value="res2">1024 x 768</option>
-		<option value="res3">1920 x 1080</option>
-	</select>
-	<p>Graphics Quality</p>
+<button onclick="CloseSelf()" id="closeButton" type="button" class="btn">X</button>
+
+<center><h1 class="titleText">Visual Settings</h1></center>
+<br><br>
+
+<div class="settingsBox" role="group">
+	<table>
+	    <tbody>
+	        <tr>
+	            <td>
+	            	<p class="optionsText">Display Mode</p>
+	            </td>
+	            <td>
+	            	<select class="dropdown1">
+						<option value="windowed">Windowed</option>
+						<option value="fullScreen">Full Screen</option>
+					</select>
+	            </td>
+	        </tr>
+	    </tbody>
+	</table>
+
+	<table>
+	    <tbody>
+	        <tr>
+	            <td>
+	            	<p class="optionsText">Resolution</p>
+	            </td>
+	            <td>
+	            	<select class="dropdown2">
+						<option value="res1">1440 x 440</option>
+						<option value="res2">1024 x 768</option>
+						<option value="res3">1920 x 1080</option>
+					</select>
+	            </td>
+	        </tr>
+	    </tbody>
+	</table>
+
+	
 	<table id="graphicsQualityTable">
 	    <tbody>
 	        <tr>
+	        	<td></td>
 	            <td rowspan="2" colspan="2">
-	            	<input type="range" id="graphicsRange" value="10" max="15">
+	            	<input type="range" id="graphicsRange" value="2" min="1" max="3" step="1">
 	            </td>
-	            <td>High</td>
+	            <td class="sliderText">High</td>
 	        </tr>
 	        <br>
 	        <tr>
-	            <td colspan="1">Medium</td>
+	        	<td><p class="optionsText">Graphics Quality</p></td>
+	            <td class="sliderText" colspan="1">Medium</td>
 	        </tr>
 	        <tr>
 	        	<td><br></td>
 	        </tr>
 	        <tr>
+	        	<td></td>
 	        	<td colspan="2"></td>
-	            <td>Low</td>
+	            <td class="sliderText">Low</td>
 	        </tr>
 	    </tbody>
 	</table>
