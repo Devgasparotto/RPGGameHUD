@@ -1,6 +1,6 @@
 //Specify Other HTML Page dimensions here
-var inventoryWidth =1400;
-var inventoryHeight = 800;
+var inventoryWidth =1000;
+var inventoryHeight = 600;
 var mainSettingsWidth = 500;
 var mainSettingsHeight = 500;
 var mapWidth = 1600;
@@ -28,6 +28,10 @@ $(document).keyup(function(e) {
 
 window.onload = function() {
     OnLoad();
+    //Initialize Width and Height on screen
+    inventoryWidth = 0.8*window.screen.availHeight;
+    inventoryHeight = 0.8*window.screen.availHeight;
+    DisplayInventory();
 };
 
 function OnLoad(){

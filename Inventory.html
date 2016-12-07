@@ -10,17 +10,141 @@
 	
 	
 	<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="index.css">	
+	<link rel="stylesheet" href="inventory.css">	
 </head>
 
 <body>
+
+<div>
+    Row:<input type="range" id="row-count" min="1" max="50" step="1" value="3" /><label for="row-count"></label>
+    <br />
+    Column:<input type="range" id="column-count" min="1" max="50" step="1" value="3" /><label for="column-count"></label>
+</div>
+    
+<div class="inventory-table" id="personal-inventory">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+            <div class="inventory-item grape"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item sword1" data-item-type="weapon sword"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item carrot"></div>
+        </div>
+        <div class="inventory-cell">
+        </div>
+        <div class="inventory-cell">
+        </div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell">
+            <div class="inventory-item carrot" data-item-type="food"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item meat1" data-item-type="food cookable"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item meat1" data-item-type="food cookable"></div>
+        </div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell">
+            <div class="inventory-item axe1" data-item-type="weapon axe"></div>    
+        </div>
+        <div class="inventory-cell">
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item grape" data-item-type="food"></div>
+        </div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+    </div>
+</div>
+
+<br />
+
+Chest:
+<div class="inventory-table">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+            <div class="inventory-item grape" data-item-type="food"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item sword1" data-item-type="weapon sword"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item carrot" data-item-type="food"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item fire-sword1" data-item-type="weapon sword enchanted"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item fire-bow1" data-item-type="weapon bow enchanted"></div>
+        </div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell">
+            <div class="inventory-item carrot" data-item-type="food"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item fire-axe1" data-item-type="weapon axe enchanted"></div>    
+        </div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+    </div>
+</div>
+
+
+
+<br />
+
+Furnace:
+<div class="inventory-table" data-item-filter-whitelist="cookable">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+        </div>
+        <div class="inventory-cell">
+        </div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell">
+        </div>
+        <div class="inventory-cell">
+        </div>
+    </div>
+</div>
+
+<br />
+
+Only enchanted weapons that are not an axe:
+<div class="inventory-table" data-item-filter-whitelist="weapon+enchanted" data-item-filter-blacklist="axe">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+            <div class="inventory-item fire-bow1" data-item-type="weapon bow enchanted"></div>
+        </div>
+        <div class="inventory-cell">
+        </div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell">
+        </div>
+        <div class="inventory-cell">
+        </div>
+    </div>
+</div>
+
 
 
 <!-- Include jquery.min.js plugin -->
 	<script src="assets/js/jquery-2.1.0.min.js"></script>
 	<!-- Include Bootstrap -->
 	<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-	<script src="index.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> <!--TODO: get a folder version for this-->
+	<script src="inventory.js"></script>
 </body>
 
 </html>
