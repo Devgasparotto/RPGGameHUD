@@ -3,8 +3,8 @@ var inventoryWidth =1000;
 var inventoryHeight = 600;
 var mainSettingsWidth = 500;
 var mainSettingsHeight = 500;
-var mapWidth = 1600;
-var mapHeight = 750;
+var mapWidth = 800;
+var mapHeight = 375;
 
 //Specify current state of screen
 var screenStates = {
@@ -31,7 +31,8 @@ window.onload = function() {
     //Initialize Width and Height on screen
     inventoryWidth = 0.8*window.screen.availHeight;
     inventoryHeight = 0.8*window.screen.availHeight;
-    DisplayInventory();
+
+    
 };
 
 function OnLoad(){
@@ -88,6 +89,8 @@ function DisplayMainSettings(){
 
 function DisplayMap(){
     if(currentState != screenStates.Settings){
+        mapWidth = window.screen.availWidth;
+        mapHeight = mapWidth/2.133;
         currentState = screenStates.Map;
         mapURL = "Map.html";
         SetMainScreenButtonVisibility(false);

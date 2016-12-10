@@ -5,22 +5,27 @@ body{
 	
 }
 
+img{
+	width: 70%;
+	height: auto;
+}
+
 .anchorLocation{
 	position: absolute;
-	left: 320px;
-	top: 70px;
+	left: 20%;
+	top: 10%;
 }
 
 .towerLocation{
 	position: absolute;
-	left: 900px;
-	top: 120px;
+	left: 57%;
+	top: 17%;
 }
 
 .towerHouseLocation{
 	position: absolute;
-	left: 320px;
-	top: 590px;
+	left: 20%;
+	top: 80%;
 }
 
 #fastTravelBox{
