@@ -7,16 +7,15 @@ html {
 
 body
 {
-    background: #332f2c;
-  
-    color: #dddddd;
-    font-family: Arial;
+    background: #5998ff;
 }
 
 /* Item atlas: http://i.imgur.com/ngGK5MF.png
  * Table atlas: http://i.imgur.com/nOqKSbE.png
 */
 
+/*DG: Somewhere in the commented code handles drag and drop for the extended columns (extended rows still works)*/
+/*
 a, a:link, a:visited { 
   color: #c00;
   text-decoration: none;
@@ -35,6 +34,26 @@ input[type="range"]
 {
     width: 400px;
 }
+*/
+
+
+#personalInventory{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+}
+
+#currentlyEquipped{
+    position: absolute;
+    left: 80%;
+    top: 50%;
+}
+
+#checkboxStuff{
+    position: absolute;
+    left: 0%;
+    top: 50%;
+}
 
 .inventory-table
 {
@@ -43,6 +62,7 @@ input[type="range"]
 
 .inventory-row
 {
+    
     display: flex;
 	flex-direction: row;
 	justify-content: flex-start; /* align items in Main Axis */
@@ -68,7 +88,7 @@ input[type="range"]
     background-position: -229px -331px;
 }
 
-/* left */
+/* left *//*
 .inventory-cell:first-child
 {
     width: 38px;
@@ -77,7 +97,7 @@ input[type="range"]
     background-position: -190px -331px;
 }
 
-/* right */
+/* right *//*
 .inventory-cell:last-child
 {
     width: 38px;
@@ -85,9 +105,10 @@ input[type="range"]
     
     background-position: -266px -331px;
 }
-    
+*/    
 
 /* top ROW */
+/*
 .inventory-row:first-child .inventory-cell
 {
     height: 38px;
@@ -96,7 +117,7 @@ input[type="range"]
     background-position: -229px -292px;
 }
 
-/* bottom ROW */
+/* bottom ROW *//*
 .inventory-row:last-child .inventory-cell
 {
     height: 38px;
@@ -105,7 +126,7 @@ input[type="range"]
     background-position: -229px -368px;
 }
 
-/* top left */
+/* top left *//*
 .inventory-row:first-child .inventory-cell:first-child
 {
     width: 38px;
@@ -114,7 +135,7 @@ input[type="range"]
     background-position: -190px -292px;
 }
 
-/* top right */
+/* top right *//*
 .inventory-row:first-child .inventory-cell:last-child
 {
     width: 38px;
@@ -123,7 +144,7 @@ input[type="range"]
     background-position: -266px -292px;
 }
 
-/* bottom left */
+/* bottom left *//*
 .inventory-row:last-child .inventory-cell:first-child
 {
     width: 38px;
@@ -132,7 +153,7 @@ input[type="range"]
     background-position: -190px -368px;
 }
 
-/* bottom right */
+/* bottom right *//*
 .inventory-row:last-child .inventory-cell:last-child
 {
     width: 38px;
@@ -142,14 +163,14 @@ input[type="range"]
 }
 
 
-/* single horizontal */
+/* single horizontal *//*
 .inventory-row:only-child .inventory-cell
 {
     height: 40px;
     
     background-position: -613px -286px;
 }
-/* single horizontal left */
+/* single horizontal left *//*
 .inventory-row:only-child .inventory-cell:first-child
 {
     width: 38px;
@@ -157,7 +178,7 @@ input[type="range"]
     
     background-position: -574px -286px;
 }
-/* single horizontal right */
+/* single horizontal right *//*
 .inventory-row:only-child .inventory-cell:last-child
 {
     width: 38px;
@@ -166,14 +187,14 @@ input[type="range"]
     background-position: -650px -286px;
 }
 
-/* single vertical */
+/* single vertical *//*
 .inventory-row .inventory-cell:only-child
 {
     width: 40px;
     
     background-position: -563px -463px;
 }
-/* single vertical top */
+/* single vertical top *//*
 .inventory-row:first-child .inventory-cell:only-child
 {
     width: 40px;
@@ -181,7 +202,7 @@ input[type="range"]
     
     background-position: -563px -424px;
 }
-/* single vertical bottom */
+/* single vertical bottom *//*
 .inventory-row:last-child .inventory-cell:only-child
 {
     width: 40px;
@@ -190,7 +211,7 @@ input[type="range"]
     background-position: -563px -500px;
 }
 
-/* single by singel */
+/* single by singel *//*
 .inventory-row:only-child .inventory-cell:only-child
 {
     width: 40px;
@@ -199,7 +220,7 @@ input[type="range"]
     background-position: -30px -288px;
 }
 
-
+*/
 
 /* ITEMS */
 

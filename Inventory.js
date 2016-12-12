@@ -35,6 +35,9 @@ jQuery.fn.extend({
     },
     // Modified and Updated by MLM
     // Origin: Davy8 (http://stackoverflow.com/a/5212193/796832)
+
+    //parentToAnimate: handles updating the images on the new spot dragged to
+    
     parentToAnimate: function(newParent, duration) {
         duration = duration || 'slow';
         
@@ -71,7 +74,9 @@ jQuery.fn.extend({
             //console.log("parentTo Animate done");
         }
     }
+    
 });
+
 
 $('#row-count').on('input propertychange change', function() {
     var targetRowCount = $(this).val();
@@ -79,10 +84,12 @@ $('#row-count').on('input propertychange change', function() {
     $('label[for="'+$(this).attr('id')+'"]').html(targetRowCount);
       
     $('#personal-inventory.inventory-table').addRemoveItems(targetRowCount);
-    
     refreshSortableInventoryList();
 }).trigger('change');
 
+
+//column-count on change: updates number of columns in table as column slider adjusts
+/*
 $('#column-count').on('input propertychange change', function() {
     var targetColumnCount = $(this).val();
     //console.log('target count: ' + targetColumnCount);
@@ -92,13 +99,13 @@ $('#column-count').on('input propertychange change', function() {
     
     refreshSortableInventoryList();
 }).trigger('change');
-
+*/
 
 
 
 // Sorting, dragging, dropping, etc
 
-refreshSortableInventoryList();
+//refreshSortableInventoryList();
 function refreshSortableInventoryList()
 {
     $('.inventory-cell').sortable({
@@ -150,6 +157,7 @@ function refreshSortableInventoryList()
     }).disableSelection();
 }
 
+//verifyWithWhiteBlackLists: checks if an item can be inserted
 function verifyWithWhiteBlackLists(itemList, whiteList, blackList)
 {
     // itemList should contain tags

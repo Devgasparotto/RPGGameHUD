@@ -31,8 +31,6 @@ window.onload = function() {
     //Initialize Width and Height on screen
     inventoryWidth = 0.8*window.screen.availHeight;
     inventoryHeight = 0.8*window.screen.availHeight;
-
-    
 };
 
 function OnLoad(){

@@ -16,12 +16,16 @@
 <body>
 
 <div>
+    <!--Drag and drop functionality removed when these are removed-->
     Row:<input type="range" id="row-count" min="1" max="50" step="1" value="3" /><label for="row-count"></label>
-    <br />
-    Column:<input type="range" id="column-count" min="1" max="50" step="1" value="3" /><label for="column-count"></label>
 </div>
-    
-<div class="inventory-table" id="personal-inventory">
+
+
+<div class="container" id="checkboxStuff">
+    Checkbox and stuff
+</div>
+
+<div class="inventory-table" id="personalInventory">
     <div class="inventory-row">
         <div class="inventory-cell">
             <div class="inventory-item grape"></div>
@@ -64,25 +68,14 @@
     </div>
 </div>
 
-<br />
 
-Chest:
-<div class="inventory-table">
+<div class="inventory-table" id="currentlyEquipped">
     <div class="inventory-row">
         <div class="inventory-cell">
             <div class="inventory-item grape" data-item-type="food"></div>
         </div>
         <div class="inventory-cell">
             <div class="inventory-item sword1" data-item-type="weapon sword"></div>
-        </div>
-        <div class="inventory-cell">
-            <div class="inventory-item carrot" data-item-type="food"></div>
-        </div>
-        <div class="inventory-cell">
-            <div class="inventory-item fire-sword1" data-item-type="weapon sword enchanted"></div>
-        </div>
-        <div class="inventory-cell">
-            <div class="inventory-item fire-bow1" data-item-type="weapon bow enchanted"></div>
         </div>
     </div>
     <div class="inventory-row">
@@ -91,48 +84,6 @@ Chest:
         </div>
         <div class="inventory-cell">
             <div class="inventory-item fire-axe1" data-item-type="weapon axe enchanted"></div>    
-        </div>
-        <div class="inventory-cell"></div>
-        <div class="inventory-cell"></div>
-        <div class="inventory-cell"></div>
-    </div>
-</div>
-
-
-
-<br />
-
-Furnace:
-<div class="inventory-table" data-item-filter-whitelist="cookable">
-    <div class="inventory-row">
-        <div class="inventory-cell">
-        </div>
-        <div class="inventory-cell">
-        </div>
-    </div>
-    <div class="inventory-row">
-        <div class="inventory-cell">
-        </div>
-        <div class="inventory-cell">
-        </div>
-    </div>
-</div>
-
-<br />
-
-Only enchanted weapons that are not an axe:
-<div class="inventory-table" data-item-filter-whitelist="weapon+enchanted" data-item-filter-blacklist="axe">
-    <div class="inventory-row">
-        <div class="inventory-cell">
-            <div class="inventory-item fire-bow1" data-item-type="weapon bow enchanted"></div>
-        </div>
-        <div class="inventory-cell">
-        </div>
-    </div>
-    <div class="inventory-row">
-        <div class="inventory-cell">
-        </div>
-        <div class="inventory-cell">
         </div>
     </div>
 </div>
