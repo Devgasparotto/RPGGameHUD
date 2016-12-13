@@ -1,8 +1,112 @@
+body{
+  background-image: url("images/backdrop.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+#b1{
+  background-size: 100%;
+  background-size:cover;
+  background-image: url("images/1.png");
+  background-repeat:no-repeat;
+  padding: 20px 20px;
+}
+
+#b2{
+  background-size: 100%;
+  background-size:cover;
+  background-image: url("images/2.png");
+  background-repeat:no-repeat;
+  padding: 20px 20px;
+}
+
+#b3{
+  background-size: 100%;
+  background-size:cover;
+  background-image: url("images/3.png");
+  background-repeat:no-repeat;
+  padding: 20px 20px;
+}
+
+#b4{
+  background-size: 100%;
+  background-size:cover;
+  background-image: url("images/4.png");
+  background-repeat:no-repeat;
+  padding: 20px 20px;
+}
+
+#b5{
+  background-size: 100%;
+  background-size:cover;
+  background-image: url("images/5.png");
+  background-repeat:no-repeat;
+  padding: 20px 20px;
+}
+
+#b6{
+  background-size: 100%;
+  background-size:cover;
+  background-image: url("images/6.png");
+  background-repeat:no-repeat;
+  padding: 20px 20px;
+}
+
+#b7{
+  background-size: 100%;
+  background-size:cover;
+  background-image: url("images/7.png");
+  background-repeat:no-repeat;
+  padding: 20px 20px;
+}
+
+#b8{
+  background-size: 100%;
+  background-size:cover;
+  background-image: url("images/8.png");
+  background-repeat:no-repeat;
+  padding: 20px 20px;
+}
+
+#b9{
+  background-size: 100%;
+  background-size:cover;
+  background-image: url("images/9.png");
+  background-repeat:no-repeat;
+  padding: 20px 20px;
+}
+
+#b0{
+  background-size: 100%;
+  background-size:cover;
+  background-image: url("images/10.png");
+  background-repeat:no-repeat;
+  padding: 20px 20px;
+}
+
+#gear{
+  background-size: 100%;
+  background-size:cover;
+  background-image: url("images/gear.png");
+  background-repeat:no-repeat;
+  padding: 20px 20px;
+}
+
+#bag{
+  background-size: 100%;
+  background-image: url("images/bag.png");
+  background-repeat:no-repeat;
+  font-size: 40px;
+  padding: 45px 33px;
+  background-color: Transparent;
+  border: none;
+}
+
 .taskBar{
   position:absolute;
   bottom:0px;
   right:25%;
-  left:50%;
+  left:47%;
   margin-left:-200px;
 }
 
@@ -11,7 +115,7 @@
   bottom:0px;
   right:25%;
   left:50%;
-  margin-left: 600px;
+  margin-left: 500px;
 }
 
 #secondaryWindow{

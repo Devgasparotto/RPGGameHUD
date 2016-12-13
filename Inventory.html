@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>-->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -15,75 +14,176 @@
 
 <body>
 
-<div>
-    <!--Drag and drop functionality removed when these are removed-->
-    Row:<input type="range" id="row-count" min="1" max="50" step="1" value="3" /><label for="row-count"></label>
+<div id="row-count">
 </div>
 
+<!-- Title of the inventory screen -->
+<div id="title">
+    Inventory
+</div>
 
+<!-- Div for the checkboxes -->
 <div class="container" id="checkboxStuff">
-    Checkbox and stuff
+    <h2><u>Showing</u></h2>
+    <input type="checkbox">   Weapons<br>
+    <input type="checkbox">   Armor<br>
+    <input type="checkbox">   Shields<br>
+    <input type="checkbox">   Spells<br>
+    <input type="checkbox">   Select/Deselect All
 </div>
 
+<!-- This is the div for the inventory grid -->
 <div class="inventory-table" id="personalInventory">
     <div class="inventory-row">
         <div class="inventory-cell">
-            <div class="inventory-item grape"></div>
+            <div class="inventory-item sword"></div>
         </div>
         <div class="inventory-cell">
-            <div class="inventory-item sword1" data-item-type="weapon sword"></div>
+            <div class="inventory-item axe"></div>
         </div>
         <div class="inventory-cell">
-            <div class="inventory-item carrot"></div>
+            <div class="inventory-item armor1"></div>
         </div>
         <div class="inventory-cell">
+            <div class="inventory-item armor2"></div>
         </div>
         <div class="inventory-cell">
+            <div class="inventory-item shield1"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item shield2"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item spell1"></div>
         </div>
     </div>
     <div class="inventory-row">
         <div class="inventory-cell">
-            <div class="inventory-item carrot" data-item-type="food"></div>
+            <div class="inventory-item spell2"></div>
         </div>
-        <div class="inventory-cell">
-            <div class="inventory-item meat1" data-item-type="food cookable"></div>
-        </div>
-        <div class="inventory-cell">
-            <div class="inventory-item meat1" data-item-type="food cookable"></div>
-        </div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
         <div class="inventory-cell"></div>
         <div class="inventory-cell"></div>
     </div>
     <div class="inventory-row">
-        <div class="inventory-cell">
-            <div class="inventory-item axe1" data-item-type="weapon axe"></div>    
-        </div>
-        <div class="inventory-cell">
-        </div>
-        <div class="inventory-cell">
-            <div class="inventory-item grape" data-item-type="food"></div>
-        </div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
         <div class="inventory-cell"></div>
         <div class="inventory-cell"></div>
     </div>
 </div>
 
+<!-- Equipment title -->
+<div id="equip">
+    <h2><u>Equipment</u></h2>
+</div>
 
-<div class="inventory-table" id="currentlyEquipped">
+<!-- Div for the man equipment model -->
+<div id="man">
+    <img src="images/stick.png" width="100" height="100" >
+</div>
+
+<!-- Div for the currently equipped left hand item -->
+<div class="inventory-table" id="lHand">
     <div class="inventory-row">
         <div class="inventory-cell">
             <div class="inventory-item grape" data-item-type="food"></div>
         </div>
-        <div class="inventory-cell">
-            <div class="inventory-item sword1" data-item-type="weapon sword"></div>
-        </div>
     </div>
+</div>
+
+<!-- Div for the currently equipped right hand item -->
+<div class="inventory-table" id="rHand">
     <div class="inventory-row">
         <div class="inventory-cell">
-            <div class="inventory-item carrot" data-item-type="food"></div>
+            <div class="inventory-item grape" data-item-type="food"></div>
         </div>
+    </div>
+</div>
+
+<!-- Div for the currently equipped armour item -->
+<div class="inventory-table" id="armour">
+    <div class="inventory-row">
         <div class="inventory-cell">
-            <div class="inventory-item fire-axe1" data-item-type="weapon axe enchanted"></div>    
+            <div class="inventory-item grape" data-item-type="food"></div>
         </div>
     </div>
 </div>
@@ -94,7 +194,7 @@
 	<script src="assets/js/jquery-2.1.0.min.js"></script>
 	<!-- Include Bootstrap -->
 	<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> <!--TODO: get a folder version for this-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	<script src="inventory.js"></script>
 </body>
 

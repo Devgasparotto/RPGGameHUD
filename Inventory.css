@@ -7,52 +7,54 @@ html {
 
 body
 {
-    background: #5998ff;
+    background: #d19d23;
 }
 
-/* Item atlas: http://i.imgur.com/ngGK5MF.png
- * Table atlas: http://i.imgur.com/nOqKSbE.png
-*/
+#title{
+    font-size: 32pt;
+    text-align: center;
+}
 
-/*DG: Somewhere in the commented code handles drag and drop for the extended columns (extended rows still works)*/
-/*
-a, a:link, a:visited { 
-  color: #c00;
-  text-decoration: none;
-  
-  -webkit-transition: all 0.3s ease;  
-  transition: all 0.3s ease;
+#equip{
+    position: absolute;
+    right: 2%;
+    top: 15%;
 }
-a:hover { 
-  color: #ff5c19;
-  text-decoration: underline;
-}  
-a:active { 
-  color: #6aff19;
-}
-input[type="range"]
-{
-    width: 400px;
-}
-*/
 
+#man{
+    position: absolute;
+    right: 7%;
+    top: 30%;
+}
 
 #personalInventory{
     position: absolute;
-    left: 40%;
-    top: 50%;
+    left: 27%;
+    top: 15%;
 }
 
-#currentlyEquipped{
+#lHand{
     position: absolute;
-    left: 80%;
-    top: 50%;
+    right: 20%;
+    top: 35%;
+}
+
+#rHand{
+    position: absolute;
+    right: 5%;
+    top: 35%;
+}
+
+#armour{
+    position: absolute;
+    right: 12.5%;
+    top: 48%;
 }
 
 #checkboxStuff{
     position: absolute;
     left: 0%;
-    top: 50%;
+    top: 15%;
 }
 
 .inventory-table
@@ -88,139 +90,6 @@ input[type="range"]
     background-position: -229px -331px;
 }
 
-/* left *//*
-.inventory-cell:first-child
-{
-    width: 38px;
-    padding-left: 2px;
-    
-    background-position: -190px -331px;
-}
-
-/* right *//*
-.inventory-cell:last-child
-{
-    width: 38px;
-    padding-right: 2px;
-    
-    background-position: -266px -331px;
-}
-*/    
-
-/* top ROW */
-/*
-.inventory-row:first-child .inventory-cell
-{
-    height: 38px;
-    padding-top: 2px;
-    
-    background-position: -229px -292px;
-}
-
-/* bottom ROW *//*
-.inventory-row:last-child .inventory-cell
-{
-    height: 38px;
-    padding-bottom: 2px;
-    
-    background-position: -229px -368px;
-}
-
-/* top left *//*
-.inventory-row:first-child .inventory-cell:first-child
-{
-    width: 38px;
-    height: 38px;
-    
-    background-position: -190px -292px;
-}
-
-/* top right *//*
-.inventory-row:first-child .inventory-cell:last-child
-{
-    width: 38px;
-    height: 38px;
-    
-    background-position: -266px -292px;
-}
-
-/* bottom left *//*
-.inventory-row:last-child .inventory-cell:first-child
-{
-    width: 38px;
-    height: 38px;
-    
-    background-position: -190px -368px;
-}
-
-/* bottom right *//*
-.inventory-row:last-child .inventory-cell:last-child
-{
-    width: 38px;
-    height: 38px;
-    
-    background-position: -266px -368px;
-}
-
-
-/* single horizontal *//*
-.inventory-row:only-child .inventory-cell
-{
-    height: 40px;
-    
-    background-position: -613px -286px;
-}
-/* single horizontal left *//*
-.inventory-row:only-child .inventory-cell:first-child
-{
-    width: 38px;
-    height: 40px;
-    
-    background-position: -574px -286px;
-}
-/* single horizontal right *//*
-.inventory-row:only-child .inventory-cell:last-child
-{
-    width: 38px;
-    height: 40px;
-    
-    background-position: -650px -286px;
-}
-
-/* single vertical *//*
-.inventory-row .inventory-cell:only-child
-{
-    width: 40px;
-    
-    background-position: -563px -463px;
-}
-/* single vertical top *//*
-.inventory-row:first-child .inventory-cell:only-child
-{
-    width: 40px;
-    height: 38px;
-    
-    background-position: -563px -424px;
-}
-/* single vertical bottom *//*
-.inventory-row:last-child .inventory-cell:only-child
-{
-    width: 40px;
-    height: 38px;
-    
-    background-position: -563px -500px;
-}
-
-/* single by singel *//*
-.inventory-row:only-child .inventory-cell:only-child
-{
-    width: 40px;
-    height: 40px;
-    
-    background-position: -30px -288px;
-}
-
-*/
 
 /* ITEMS */
 
@@ -228,8 +97,6 @@ input[type="range"]
 {
     width: 34px;
     height: 34px;
-    background-image: url('https://i.imgur.com/ngGK5MF.png');
-    background-repeat: no-repeat;
     
     cursor: hand;
     cursor: pointer;
@@ -248,39 +115,56 @@ input[type="range"]
     opacity: .6;
 }
 
-.inventory-item.grape
+.inventory-item.sword
 {
-    background-position: 0px 0px;
+    background-image: url("images/sword1.png");
+    background-size: 100%;
+    background-size:cover;
 }
-.inventory-item.carrot
+.inventory-item.axe
 {
-    background-position: -34px -34px;
+    background-image: url("images/axe1.png");
+    background-size: 100%;
+    background-size:cover;
 }
-.inventory-item.sword1
+.inventory-item.armor1
 {
-    background-position: 0px -170px;
+    background-image: url("images/armor1.png");
+    background-size: 100%;
+    background-size:cover;
 }
-.inventory-item.fire-sword1
+
+.inventory-item.armor2
 {
-    background-position: -34px -952px;
+    background-image: url("images/armor2.png");
+    background-size: 100%;
+    background-size:cover;
 }
-.inventory-item.axe1
+
+.inventory-item.shield1
 {
-    background-position: -170px -340px;
+    background-image: url("images/shield1.png");
+    background-size: 100%;
+    background-size:cover;
 }
-.inventory-item.fire-axe1
+
+.inventory-item.shield2
 {
-    background-position: -306px -340px;
+    background-image: url("images/shield2.png");
+    background-size: 100%;
+    background-size:cover;
 }
-.inventory-item.fire-bow1
+
+.inventory-item.spell1
 {
-    background-position: -238px -374px;
+    background-image: url("images/spell1.png");
+    background-size: 100%;
+    background-size:cover;
 }
-.inventory-item.meat1
+
+.inventory-item.spell2
 {
-    background-position: -374px -34px;
-}
-.inventory-item.meat1-cooked
-{
-    background-position: -442px -34px;
+    background-image: url("images/spell2.png");
+    background-size: 100%;
+    background-size:cover;
 }
