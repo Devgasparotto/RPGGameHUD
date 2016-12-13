@@ -97,10 +97,14 @@ function DisplayMap(){
 }
 
 function DisplayInventory(){
-    if(currentState != screenStates.Settings){
+    if(currentState != screenStates.Settings && currentState != screenStates.Inventory){
         currentState = screenStates.Inventory;
         inventoryURL = "Inventory.html";
         SetSecondaryWindowProperties(inventoryWidth, inventoryHeight, inventoryURL, true);
+    }
+    else{
+        currentState = screenStates.Main;
+        SetSecondaryWindowProperties(0, 0, "", false);
     }
 }
 

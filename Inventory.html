@@ -25,41 +25,41 @@
 <!-- Div for the checkboxes -->
 <div class="container" id="checkboxStuff">
     <h2><u>Showing</u></h2>
-    <input type="checkbox">   Weapons<br>
-    <input type="checkbox">   Armor<br>
-    <input type="checkbox">   Shields<br>
-    <input type="checkbox">   Spells<br>
-    <input type="checkbox">   Select/Deselect All
+    <input id="weaponsCheckbox" type="checkbox" onclick="UpdateShownInventory()">   Weapons<br>
+    <input id="armorCheckbox" type="checkbox" onclick="UpdateShownInventory()">   Armor<br>
+    <input id="shieldsCheckbox" type="checkbox" onclick="UpdateShownInventory()">   Shields<br>
+    <input id="spellsCheckbox" type="checkbox" onclick="UpdateShownInventory()">   Spells<br>
+    <input id="selectDeselectAllCheckbox" type="checkbox" onclick="SelectDeselectAll()">   Select/Deselect All
 </div>
 
 <!-- This is the div for the inventory grid -->
 <div class="inventory-table" id="personalInventory">
     <div class="inventory-row">
         <div class="inventory-cell">
-            <div class="inventory-item sword"></div>
+            <div class="inventory-item sword" data-item-type="hand"></div>
         </div>
         <div class="inventory-cell">
-            <div class="inventory-item axe"></div>
+            <div class="inventory-item axe" data-item-type="hand"></div>
         </div>
         <div class="inventory-cell">
-            <div class="inventory-item armor1"></div>
+            <div class="inventory-item armor1" data-item-type="armour"></div>
         </div>
         <div class="inventory-cell">
-            <div class="inventory-item armor2"></div>
+            <div class="inventory-item armor2" data-item-type="armour"></div>
         </div>
         <div class="inventory-cell">
-            <div class="inventory-item shield1"></div>
+            <div class="inventory-item shield1" data-item-type="hand"></div>
         </div>
         <div class="inventory-cell">
-            <div class="inventory-item shield2"></div>
+            <div class="inventory-item shield2" data-item-type="hand"></div>
         </div>
         <div class="inventory-cell">
-            <div class="inventory-item spell1"></div>
+            <div class="inventory-item spell1" data-item-type="hand"></div>
         </div>
     </div>
     <div class="inventory-row">
         <div class="inventory-cell">
-            <div class="inventory-item spell2"></div>
+            <div class="inventory-item spell2" data-item-type="hand"></div>
         </div>
         <div class="inventory-cell"></div>
         <div class="inventory-cell"></div>
@@ -162,7 +162,7 @@
 </div>
 
 <!-- Div for the currently equipped left hand item -->
-<div class="inventory-table" id="lHand">
+<div class="inventory-table" id="lHand" data-item-filter-whitelist="hand">
     <div class="inventory-row">
         <div class="inventory-cell">
             <div class="inventory-item grape" data-item-type="food"></div>
@@ -171,7 +171,7 @@
 </div>
 
 <!-- Div for the currently equipped right hand item -->
-<div class="inventory-table" id="rHand">
+<div class="inventory-table" id="rHand" data-item-filter-whitelist="hand">
     <div class="inventory-row">
         <div class="inventory-cell">
             <div class="inventory-item grape" data-item-type="food"></div>
@@ -180,7 +180,7 @@
 </div>
 
 <!-- Div for the currently equipped armour item -->
-<div class="inventory-table" id="armour">
+<div class="inventory-table" id="armour" data-item-filter-whitelist="armour">
     <div class="inventory-row">
         <div class="inventory-cell">
             <div class="inventory-item grape" data-item-type="food"></div>
@@ -188,6 +188,8 @@
     </div>
 </div>
 
+
+<div id="itemCharacteristics"></div>
 
 
 <!-- Include jquery.min.js plugin -->

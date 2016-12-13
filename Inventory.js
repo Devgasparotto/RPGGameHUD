@@ -8,7 +8,176 @@ $(document).keyup(function(e) {
     }
 });
 
+window.onload = function() {
+    document.getElementById("selectDeselectAllCheckbox").checked = true;
+    SelectDeselectAll();
+};
+
 "use strict";
+
+//On hover display item characteristics
+$(".inventory-item").mouseover(
+    function(event){
+        DisplayItemCharacteristics(event, this);
+    }
+);
+
+$(".inventory-item").mouseout(
+    function(){
+        HideItemCharacteristics();
+    }
+);
+
+function DisplayItemCharacteristics(event, inventoryItem){
+    var itemCharacteristicsBox = document.getElementById("itemCharacteristics");
+    var itemDescription = GetItemDescriptionByItemName(inventoryItem.className.split(" ")[1]);
+    itemCharacteristicsBox.innerHTML = itemDescription;
+    itemCharacteristicsBox.style.left = event.clientX + "px";
+    itemCharacteristicsBox.style.top = event.clientY + "px";
+    itemCharacteristicsBox.style.visibility = "visible";
+}
+
+function HideItemCharacteristics(){
+    var itemCharacteristicsBox = document.getElementById("itemCharacteristics");
+    itemCharacteristicsBox.style.visibility = "hidden";
+}
+
+function GetItemDescriptionByItemName(itemClass){
+    var descriptionText = "";
+    switch(itemClass){
+        case "sword":
+            descriptionText = "<p>Obsidian Sword</p>" +
+            "<p>Damage: 15</p>" +
+            "<p>Value: 15</p>" +
+            "<p>An Obsidian sword used by one handed warriors. A very valuable weapon.</p>";
+            break;
+        case "axe":
+            descriptionText = "<p>Axe</p>" +
+            "<p>Damage: 10</p>" +
+            "<p>Value: 5</p>" +
+            "<p>Might not take down a dragon, but it will cut most foes in half.</p>";
+            break;
+        case "armor1":
+            descriptionText = "<p>Light Armour</p>" +
+            "<p>Armour: 15</p>" +
+            "<p>Value: 15</p>" +
+            "<p>A light armour that allows the hero to be agile.</p>";
+            break;
+        case "armor2":
+            descriptionText = "<p>Heavy Armour</p>" +
+            "<p>Armour: 35</p>" +
+            "<p>Value: 15</p>" +
+            "<p>Heavy armour that will keep the hero alive, but slow.</p>";
+            break;
+        case "shield1":
+            descriptionText = "<p>Black Shield</p>" +
+            "<p>Armour: 15</p>" +
+            "<p>Value: 15</p>" +
+            "<p>Has extra defense against magic.</p>";
+            break;
+        case "shield2":
+            descriptionText = "<p>Shield</p>" +
+            "<p>Armour: 5</p>" +
+            "<p>Value: 15</p>" +
+            "<p>A standard shield, it doesn't protect against much.</p>";
+            break;
+        case "spell1":
+            descriptionText = "<p>Fireball</p>" +
+            "<p>Damage: 25</p>" +
+            "<p>Value: 25</p>" +
+            "<p>A powerful spell that will light enemies aflame.</p>";
+            break;
+        case "spell2":
+            descriptionText = "<p>Freeze</p>" +
+            "<p>Damage: 5</p>" +
+            "<p>Value: 5</p>" +
+            "<p>This spell will freeze enemies in their track.</p>";
+            break;
+        default:
+            descriptionText = "<p>Item Characteristic</p>";
+            break;
+    }
+    return descriptionText;
+}
+
+
+//Update Inventory Display
+function SelectDeselectAll(){
+    var isSelectAll = document.getElementById("selectDeselectAllCheckbox").checked;
+    if(isSelectAll){
+        document.getElementById("weaponsCheckbox").checked = true;
+        document.getElementById("armorCheckbox").checked = true;
+        document.getElementById("shieldsCheckbox").checked = true;
+        document.getElementById("spellsCheckbox").checked = true;
+    }
+    else{
+        document.getElementById("weaponsCheckbox").checked = false;
+        document.getElementById("armorCheckbox").checked = false;
+        document.getElementById("shieldsCheckbox").checked = false;
+        document.getElementById("spellsCheckbox").checked = false;
+    }
+    UpdateShownInventory();
+}
+
+function UpdateShownInventory(){
+    var itemsToDisplay = new Array();
+    var itemsToNotDisplay = new Array();
+
+    //Decide which items to display
+    if(document.getElementById("weaponsCheckbox").checked){
+        itemsToDisplay.push("sword");
+        itemsToDisplay.push("axe");
+    }
+    else{
+        itemsToNotDisplay.push("sword");
+        itemsToNotDisplay.push("axe");
+    }
+
+    if(document.getElementById("armorCheckbox").checked){
+        itemsToDisplay.push("armor1");
+        itemsToDisplay.push("armor2");
+    }
+    else{
+        itemsToNotDisplay.push("armor1");
+        itemsToNotDisplay.push("armor2");
+    }
+
+    if(document.getElementById("shieldsCheckbox").checked){
+        itemsToDisplay.push("shield1");
+        itemsToDisplay.push("shield2");
+    }
+    else{
+        itemsToNotDisplay.push("shield1");
+        itemsToNotDisplay.push("shield2");
+    }
+
+    if(document.getElementById("spellsCheckbox").checked){
+        itemsToDisplay.push("spell1");
+        itemsToDisplay.push("spell2");   
+    }
+    else{
+        itemsToNotDisplay.push("spell1");
+        itemsToNotDisplay.push("spell2"); 
+    }
+
+    DisplayInventoryItems(itemsToDisplay);
+    HideInventoryItems(itemsToNotDisplay);
+}
+
+function DisplayInventoryItems(itemsToDisplay){
+    for(var i = 0; i < itemsToDisplay.length; i++){
+        var itemElement = document.getElementsByClassName(itemsToDisplay[i])[0];
+        itemElement.style.opacity = "1";
+    }
+}
+
+function HideInventoryItems(itemsToNotDisplay){
+    for(var i = 0; i < itemsToNotDisplay.length; i++){
+        var itemElement = document.getElementsByClassName(itemsToNotDisplay[i])[0];
+        itemElement.style.opacity = "0.25";
+    }
+}
+
 
 jQuery.fn.extend({
     addRemoveItems: function(targetCount) {

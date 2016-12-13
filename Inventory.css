@@ -120,18 +120,21 @@ body
     background-image: url("images/sword1.png");
     background-size: 100%;
     background-size:cover;
+    opacity: 0.25;
 }
 .inventory-item.axe
 {
     background-image: url("images/axe1.png");
     background-size: 100%;
     background-size:cover;
+    opacity: 0.25;
 }
 .inventory-item.armor1
 {
     background-image: url("images/armor1.png");
     background-size: 100%;
     background-size:cover;
+    opacity: 0.25;
 }
 
 .inventory-item.armor2
@@ -139,6 +142,7 @@ body
     background-image: url("images/armor2.png");
     background-size: 100%;
     background-size:cover;
+    opacity: 0.25;
 }
 
 .inventory-item.shield1
@@ -146,6 +150,7 @@ body
     background-image: url("images/shield1.png");
     background-size: 100%;
     background-size:cover;
+    opacity: 0.25;
 }
 
 .inventory-item.shield2
@@ -153,6 +158,7 @@ body
     background-image: url("images/shield2.png");
     background-size: 100%;
     background-size:cover;
+    opacity: 0.5;
 }
 
 .inventory-item.spell1
@@ -160,6 +166,7 @@ body
     background-image: url("images/spell1.png");
     background-size: 100%;
     background-size:cover;
+    opacity: 0.25;
 }
 
 .inventory-item.spell2
@@ -167,4 +174,14 @@ body
     background-image: url("images/spell2.png");
     background-size: 100%;
     background-size:cover;
+    opacity: 0.25;
+}
+
+
+/*On hover box*/
+#itemCharacteristics{
+    position: absolute;
+    background-color: #8F8F8F;
+    width: 120px;
+    visibility: hidden;
 }
