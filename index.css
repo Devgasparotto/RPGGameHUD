@@ -89,17 +89,17 @@ body{
 }
 
 #mapButton {
-  position:absolute;
+  position:relative;
   background-size: 100%;
   background-size:cover;
   background-image: url("images/globe.png");
   background-repeat:no-repeat;
   padding: 20px 20px;
   background-color: Transparent;
-  top: 4.5%;
-  left: 16%;
+  top: -37px;
+  left: -73px;
   border: none;
-  /*opacity: 0;*/
+ /*opacity: 0;*/
 
 /*  background: transparent;
   border: none !important;
