@@ -84,6 +84,19 @@ body{
   padding: 20px 20px;
 }
 
+#mapButton {
+  position:absolute;
+  background-size: 100%;
+  background-size:cover;
+  background-image: url("images/globe.png");
+  background-repeat:no-repeat;
+  padding: 20px 20px;
+  background-color: Transparent;
+  top: 4.5%;
+  left: 16%;
+  border: none;
+  opacity: 0;
+
 #gear{
   background-size: 100%;
   background-size:cover;
