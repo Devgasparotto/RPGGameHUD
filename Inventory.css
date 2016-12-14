@@ -51,10 +51,34 @@ body
     top: 48%;
 }
 
+#lhText{
+    position: absolute;
+    right: 18%;
+    top: 41.5%;
+}
+
+#rhText{
+    position: absolute;
+    right: 1.5%;
+    top: 41.5%;
+}
+
+#aText{
+    position: absolute;
+    right: 11.5%;
+    top: 54%;
+}
+
 #checkboxStuff{
     position: absolute;
     left: 0%;
     top: 15%;
+}
+
+#controls{
+    position: absolute;
+    left: 2%;
+    top: 47%;
 }
 
 .inventory-table
