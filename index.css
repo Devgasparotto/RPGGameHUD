@@ -82,6 +82,10 @@ body{
   background-image: url("images/10.png");
   background-repeat:no-repeat;
   padding: 20px 20px;
+
+/*  background: transparent;
+  border: none !important;
+  font-size:0;*/
 }
 
 #mapButton {
@@ -96,6 +100,11 @@ body{
   left: 16%;
   border: none;
   opacity: 0;
+
+/*  background: transparent;
+  border: none !important;
+  font-size:0;*/
+}
 
 #gear{
   background-size: 100%;
