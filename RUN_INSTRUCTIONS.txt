@@ -1,0 +1,7 @@
+Instructions for Starting the Application
+
+The application is run by opening index.html in a web browser.
+We recommend using Google Chrome or Microsoft Edge as it has the best compatiability, but it will work otherwise.
+The application by ran in the web browser by double clicking the file RPGGameHUD/index.html.
+Alternatively the file can be opened in any web browser by entering this in the address bar:
+file:///C:/{Path to Folder}/RPGGameHUD/index.html
